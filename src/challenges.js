@@ -62,8 +62,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let resposta;
+  //Math.abs Retorna o módulo, ou valor absoluto, de um número (|x|).
+  if((Math.abs(mouse-cat1))<(Math.abs(mouse-cat2)) && (cat1!==cat2)){
+    resposta="cat1"
+  }else if((Math.abs(mouse-cat1))>(Math.abs(mouse-cat2)) && (cat1!==cat2)){
+    resposta="cat2"
+  }else{
+    resposta="os gatos trombam e o rato foge"
+  }
+  return resposta;
 }
 
 // Desafio 8
