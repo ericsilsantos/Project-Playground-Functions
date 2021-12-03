@@ -97,11 +97,50 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(variavel) {
+  for(let index=0; index<variavel.length; index+=1){
+    switch(variavel[index]){
+      case "a":
+        variavel=variavel.replace("a","1");
+        break;
+      case "e":
+        variavel=variavel.replace("e","2");
+        break;
+      case "i":
+        variavel=variavel.replace("i","3");
+        break;
+      case "o":
+        variavel=variavel.replace("o","4");
+        break;
+      case "u":
+        variavel=variavel.replace("u","5");
+        break;
+    }
+  }
+  return variavel
+  //daria pra fazer essa função sem usar switch/case, apenas o replace
 }
-function decode() {
-  // seu código aqui
+function decode(variavel) {
+  for(let index=0; index<variavel.length; index+=1){
+    switch(variavel[index]){
+      case "1":
+        variavel=variavel.replace("1","a");
+        break
+      case "2":
+        variavel=variavel.replace("2","e");
+        break
+      case "3":
+        variavel=variavel.replace("3","i");
+        break
+      case "4":
+        variavel=variavel.replace("4","o");
+        break
+      case "5":
+        variavel=variavel.replace("5","u");
+        break
+    }
+  }
+  return variavel
 }
 
 module.exports = {
