@@ -45,8 +45,23 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let x=1;
-  for(let index=0; index<array.length; index+=1){
+  let key=1;
+  let maior=array[0]; //se o array tiver apenas um elemento, por consequencia ele será o maior número
+  for (key in array){
+    if(array[key-1]<array[key]){
+      maior=array[key]
+    }
+  }
+  key=0;
+  let repeticaoMaior=0;
+  for (key in array){
+    if(maior === array[key]){
+      repeticaoMaior+=1;
+    }
+  }
+  return(repeticaoMaior)
+  //OBS: tentei resolver de uma forma diferente (tinha esquecido da existencia do for/in), porém, mesmo funcionando, estava com uma complexidade muito grande.
+  /*for(let index=0; index<array.length; index+=1){
     for(let index2=index+1; index2<=array.length; index2+=1){
       if(array[index]<array[index2] ){
         x=1;
@@ -58,7 +73,7 @@ function highestCount(array) {
         return x;
       }
     }
-  }
+  }*/
 }
 
 // Desafio 7
