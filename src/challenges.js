@@ -48,7 +48,7 @@ function highestCount(array) {
   let key=1;
   let maior=array[0]; //se o array tiver apenas um elemento, por consequencia ele será o maior número
   for (key in array){
-    if(array[key-1]<array[key]){
+    if(maior<array[key]){
       maior=array[key]
     }
   }
