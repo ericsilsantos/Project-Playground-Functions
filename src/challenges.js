@@ -1,4 +1,5 @@
 // Desafio 1
+compareTrue(true,false)
 function compareTrue(primeiro,segundo) {
   if(primeiro===true && segundo===true){
       return true;
