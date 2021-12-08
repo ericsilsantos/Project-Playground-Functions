@@ -66,8 +66,15 @@ function gerarNumero(lista){
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(ladoUm,ladoDois,ladoTres) {
+  if(!(ladoUm<(ladoDois+ladoTres) && ladoUm>Math.abs(ladoDois-ladoTres))){
+      return false
+  }else if(!(ladoDois<(ladoUm+ladoTres) && ladoDois>Math.abs(ladoUm-ladoTres))){
+    return false
+  }else if(!(ladoTres<(ladoDois+ladoUm) && ladoTres>Math.abs(ladoDois-ladoUm))){
+    return false
+  }
+  return true
 }
 
 // Desafio 13
